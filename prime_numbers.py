@@ -1,6 +1,7 @@
 from utils import *
 from time import sleep
 
+
 def prime_numbers():
     while True:
         try:
@@ -11,16 +12,16 @@ def prime_numbers():
 
             if start > end:
                 raise ValueError
-            
+
             primes = []
-            
+
             for x in range(start, end + 1):
                 count = 0
 
-                for num in range (1, x + 1):
+                for num in range(1, x + 1):
                     if x % num == 0:
                         count += 1
-                
+
                 if count == 2:
                     primes.append(x)
 
@@ -38,11 +39,8 @@ def prime_numbers():
             repeat = get_number("Digite uma opcao: ")
 
             if repeat == 2:
-                break;
+                break
 
-
-
-        
         except ValueError:
             title("O final nao pode ser menor do que o inicio")
             sleep(1)

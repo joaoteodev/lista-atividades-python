@@ -1,6 +1,7 @@
 from time import sleep
 from utils import *
 
+
 def buy_list():
     while True:
         try:
@@ -10,7 +11,7 @@ def buy_list():
 
             if amount <= 0:
                 raise ValueError
-            
+
             items = []
 
             for x in range(1, amount + 1):
@@ -21,15 +22,15 @@ def buy_list():
                     # product_amount = get_number("Digite a quantidade que deseja comprar" \
                     # "[Deixe em branco para adicionar 1]: ", 1)
 
-                    if (product == ""):
+                    if product == "":
                         raise TypeError
-                    
+
                     items.append(product)
-                    
+
                 except TypeError:
                     title("O item nao pode estar vazio.")
                     sleep(1)
-     
+
             sorted_items = sorted(items)
 
             title("Itens na lista")
@@ -49,9 +50,8 @@ def buy_list():
             repeat = get_number("Digite uma opcao: ")
 
             if repeat == 2:
-                break;
+                break
 
-            
         except ValueError:
             title("O valor não pode ser inferior ou igual a zero")
             sleep(1)

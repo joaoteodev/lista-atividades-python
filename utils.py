@@ -3,12 +3,14 @@ import os
 
 
 def clear():
-    os.system('cls' if os.name == 'nt' else 'clear')
+    os.system("cls" if os.name == "nt" else "clear")
 
-def dash(n = 30, simbol = "="):
+
+def dash(n=30, simbol="="):
     print(simbol * n)
 
-def title(msg = "Mensagem padrao"):
+
+def title(msg="Mensagem padrao"):
     clear()
     size = len(msg) + 10
     dash(size)
@@ -16,7 +18,8 @@ def title(msg = "Mensagem padrao"):
     dash(size)
     print()
 
-def get_number(text, default = ""):
+
+def get_number(text, default=""):
     while True:
         input_number = input(text).replace(",", ".")
         try:
@@ -24,7 +27,7 @@ def get_number(text, default = ""):
                 return float(input_number)
             else:
                 return int(input_number)
-            
+
             # if f"{default}".isdigit():
             #     return default
 
@@ -32,6 +35,7 @@ def get_number(text, default = ""):
             title("O valor digitado não é um número válido. Tente novamente.")
             sleep(1)
             clear()
+
 
 def get_text_list(list_items):
     size = len(list_items)
@@ -49,3 +53,10 @@ def get_text_list(list_items):
         text += f"{list_items[x]}, "
 
     return text
+
+
+def message(msg, size=30):
+    print()
+    dash(len(msg))
+    print(msg.center(len(msg)))
+    dash(len(msg))
