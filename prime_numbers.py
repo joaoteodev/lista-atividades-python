@@ -29,6 +29,8 @@ def prime_numbers():
 
             print(f"Os numeros primos sao: {get_text_list(primes)}")
             print()
+            print(f"{'Foi encontrado' if len(primes) == 1 else 'Foram encontrados'} {len(primes)} {'número' if len(primes) == 1 else 'números'}")
+            print()
 
             input("Pressione enter para continuar.")
 

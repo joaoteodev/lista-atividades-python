@@ -43,7 +43,7 @@ def buy_list():
             print()
             input("Pressione enter para continuar.")
 
-            title("Deseja validar outro intervalo?")
+            title("Deseja fazer outra lista de compras?")
             print("1 - Sim")
             print("2 - Nao")
             print()
