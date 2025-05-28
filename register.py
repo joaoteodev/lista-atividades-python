@@ -50,10 +50,16 @@ def register():
     size = len(users)
 
     title(
-        f"Lista de usuários [{size} {"usuário" if size == 1 else "usuários"} registrados]: "
+        f"Lista de usuários [{size} {'usuário' if size == 1 else 'usuários'} registrados]: "
     )
-    for user in users:
-        print(f"Nome: {user['name']}, Idade: {user['age']}")
+    for index, user in enumerate(users):
+        msg = f"Nome: {user['name']}, Idade: {user['age']}"
+
+        if index == 0:
+            dash(len(msg), "-")
+
+        print(msg)
+        dash(len(msg), "-")
 
     average = sum(user["age"] for user in users) / len(users)
     msg = f"A média de idade dos usuários é {round(average)} anos."
